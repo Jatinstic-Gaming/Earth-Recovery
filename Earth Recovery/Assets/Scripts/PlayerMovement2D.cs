@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement2D : CharacterController2D
 {
     private float JumpForce = 20f;
-    private float MoveSpeed = 10f;
+    private float MoveSpeed = 8f;
 
     // Start is called before the first frame update
     void Start()
