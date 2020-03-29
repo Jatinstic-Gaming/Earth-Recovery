@@ -32,9 +32,17 @@ public class PlayerMovement2D : CharacterController2D
         {
             Animator.SetBool("IsFacingRight", false);
         }
-        else
+        else if(Animator.GetFloat("Speed") > 0.01)
         {
             Animator.SetBool("IsFacingRight", true);
+        }
+        else if(Animator.GetFloat("Speed") == 0 && Animator.GetBool("IsFacingRight") == true)
+        {
+            Animator.SetBool("IsFacingRight", true);
+        }
+        else
+        {
+            Animator.SetBool("IsFacingRight", false);
         }
 
         TargetVelocity = Move * MoveSpeed;
