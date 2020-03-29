@@ -28,6 +28,15 @@ public class PlayerMovement2D : CharacterController2D
 
         Animator.SetFloat("Speed", (Velocity.x)/MoveSpeed);
         Animator.SetBool("IsGrounded", IsGrounded);
+        if (Animator.GetFloat("Speed") < -0.01)
+        {
+            Animator.SetBool("IsFacingRight", false);
+        }
+        else
+        {
+            Animator.SetBool("IsFacingRight", true);
+        }
+
         TargetVelocity = Move * MoveSpeed;
     }
 }
