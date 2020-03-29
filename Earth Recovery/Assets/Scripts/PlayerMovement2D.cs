@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement2D : CharacterController2D
 {
-    private float JumpForce = 16f;
-    private float MoveSpeed = 8f;
+    private float JumpForce = 12f;
+    private float MoveSpeed = 5f;
 
     private Animator Animator;
 
